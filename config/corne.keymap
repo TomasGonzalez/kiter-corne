@@ -5,11 +5,26 @@
  */
 
 #include <behaviors.dtsi>
-#include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/ext_power.h>
+#include <dt-bindings/zmk/keys.h>
 
 / {
+    behaviors {
+        tap-dance-layers:
+
+        tap-dance-layers {
+            :tap-dance-layers
+
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP-DANCE-LAYERS";
+            #binding-cells = <0>;
+            bindings =
+                <&mo 3>,
+                <&sl 4>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -36,10 +51,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-   &kp GRAVE      &kp N1      &kp N2      &kp N3  &kp N4          &kp N5    &kp N6             &kp N7         &kp N8     &kp N9            &kp N0              &kp BSPC
-    &kp CAPS      &trans      &trans      &trans  &trans          &trans  &kp LEFT           &kp DOWN         &kp UP  &kp RIGHT  &kp LEFT_BRACKET     &kp RIGHT_BRACKET
-&kp LEFT_ALT  &kp C_MUTE  &kp C_PREV  &kp C_NEXT  &trans          &trans    &trans             &trans      &kp MINUS  &kp EQUAL     &kp BACKSLASH  &mt LEFT_SHIFT ENTER
-                                          &trans  &trans  &kp LEFT_SHIFT     &mo 3  &kp RIGHT_CONTROL  &kp RIGHT_GUI
+   &kp GRAVE      &kp N1      &kp N2      &kp N3  &kp N4          &kp N5             &kp N6             &kp N7         &kp N8     &kp N9            &kp N0              &kp BSPC
+    &kp CAPS      &trans      &trans      &trans  &trans          &trans           &kp LEFT           &kp DOWN         &kp UP  &kp RIGHT  &kp LEFT_BRACKET     &kp RIGHT_BRACKET
+&kp LEFT_ALT  &kp C_MUTE  &kp C_PREV  &kp C_NEXT  &trans          &trans             &trans             &trans      &kp MINUS  &kp EQUAL     &kp BACKSLASH  &mt LEFT_SHIFT ENTER
+                                          &trans  &trans  &kp LEFT_SHIFT  &tap-dance-layers  &kp RIGHT_CONTROL  &kp RIGHT_GUI
             >;
         };
 
@@ -64,6 +79,15 @@
 &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &trans  &ext_power EP_ON  &ext_power EP_OFF  &trans   &trans   &trans
     &trans        &trans        &trans        &trans        &trans        &trans  &trans            &trans             &trans  &trans   &trans   &trans
                                               &trans        &trans        &trans  &trans            &trans             &trans
+            >;
+        };
+
+        layer_4 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
     };
