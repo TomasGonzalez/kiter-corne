@@ -8,6 +8,7 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/ext_power.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/keys.h>
 
 / {
     behaviors {
@@ -17,8 +18,8 @@
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings =
-                <&sl 3>,
-                <&sl 4>;
+                <&kt LALT>,
+                <&sk LALT>;
         };
     };
 
@@ -48,10 +49,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-   &kp GRAVE      &kp N1      &kp N2      &kp N3  &kp N4          &kp N5    &kp N6             &kp N7         &kp N8     &kp N9            &kp N0              &kp BSPC
-    &kp CAPS      &trans      &trans      &trans  &trans          &trans  &kp LEFT           &kp DOWN         &kp UP  &kp RIGHT  &kp LEFT_BRACKET     &kp RIGHT_BRACKET
-&kp LEFT_ALT  &kp C_MUTE  &kp C_PREV  &kp C_NEXT  &trans          &trans    &trans             &trans      &kp MINUS  &kp EQUAL     &kp BACKSLASH  &mt LEFT_SHIFT ENTER
-                                          &trans  &trans  &kp LEFT_SHIFT      &td0  &kp RIGHT_CONTROL  &kp RIGHT_GUI
+&kp GRAVE      &kp N1      &kp N2      &kp N3  &kp N4          &kp N5    &kp N6             &kp N7         &kp N8     &kp N9            &kp N0              &kp BSPC
+ &kp CAPS      &trans      &trans      &trans  &trans          &trans  &kp LEFT           &kp DOWN         &kp UP  &kp RIGHT  &kp LEFT_BRACKET     &kp RIGHT_BRACKET
+   &trans  &kp C_MUTE  &kp C_PREV  &kp C_NEXT  &trans          &trans    &trans             &trans      &kp MINUS  &kp EQUAL     &kp BACKSLASH  &mt LEFT_SHIFT ENTER
+                                       &trans  &trans  &kp LEFT_SHIFT     &mo 3  &kp RIGHT_CONTROL  &kp RIGHT_GUI
             >;
         };
 
@@ -63,10 +64,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-   &kp TILDE  &kp EXCL             &kp AT         &kp HASH      &kp DLLR       &kp PRCNT  &kp CARET  &kp AMPS   &kp ASTERISK   &kp LPAR        &kp RPAR           &trans
-      &trans    &trans      &kp LA(LG(X))    &kp LA(LG(C))        &trans   &kp LA(LG(G))   &kp LEFT  &kp DOWN         &kp UP  &kp RIGHT  &kp LEFT_BRACE  &kp RIGHT_BRACE
-&kp LEFT_ALT  &kp C_PP  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP        &trans          &trans     &trans    &trans      &kp UNDER   &kp PLUS        &kp PIPE           &trans
-                                                 &kp LCTRL  &kp LEFT_GUI  &kp LEFT_SHIFT     &trans    &trans  &kp RIGHT_GUI
+&kp TILDE  &kp EXCL             &kp AT         &kp HASH      &kp DLLR       &kp PRCNT  &kp CARET  &kp AMPS   &kp ASTERISK   &kp LPAR        &kp RPAR           &trans
+   &trans    &trans      &kp LA(LG(X))    &kp LA(LG(C))        &trans   &kp LA(LG(G))   &kp LEFT  &kp DOWN         &kp UP  &kp RIGHT  &kp LEFT_BRACE  &kp RIGHT_BRACE
+   &trans  &kp C_PP  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP        &trans          &trans     &trans    &trans      &kp UNDER   &kp PLUS        &kp PIPE           &trans
+                                              &kp LCTRL  &kp LEFT_GUI  &kp LEFT_SHIFT     &trans    &trans  &kp RIGHT_GUI
             >;
         };
 
@@ -81,10 +82,10 @@
 
         layer_4 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &kp LEFT_SHIFT  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
     };
