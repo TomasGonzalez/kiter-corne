@@ -5,9 +5,9 @@
  */
 
 #include <behaviors.dtsi>
-#include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/ext_power.h>
+#include <dt-bindings/zmk/keys.h>
 
 / {
     behaviors {
@@ -16,7 +16,9 @@
             label = "TAP_DANCE_LAYOUTS";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&sl 3>, <&tog 4>;
+            bindings =
+                <&sl 3>,
+                <&sl 4>;
         };
     };
 
@@ -49,7 +51,7 @@
    &kp GRAVE      &kp N1      &kp N2      &kp N3  &kp N4          &kp N5    &kp N6             &kp N7         &kp N8     &kp N9            &kp N0              &kp BSPC
     &kp CAPS      &trans      &trans      &trans  &trans          &trans  &kp LEFT           &kp DOWN         &kp UP  &kp RIGHT  &kp LEFT_BRACKET     &kp RIGHT_BRACKET
 &kp LEFT_ALT  &kp C_MUTE  &kp C_PREV  &kp C_NEXT  &trans          &trans    &trans             &trans      &kp MINUS  &kp EQUAL     &kp BACKSLASH  &mt LEFT_SHIFT ENTER
-                                          &trans  &trans  &kp LEFT_SHIFT     &td0  &kp RIGHT_CONTROL  &kp RIGHT_GUI
+                                          &trans  &trans  &kp LEFT_SHIFT      &td0  &kp RIGHT_CONTROL  &kp RIGHT_GUI
             >;
         };
 
@@ -79,10 +81,10 @@
 
         layer_4 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans   &kp Z  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &kp LEFT_SHIFT  &trans  &trans  &trans
             >;
         };
     };
