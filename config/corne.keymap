@@ -16,9 +16,7 @@
             label = "TAP_DANCE_LAYOUTS";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings =
-                <&kp LEFT_ALT>,
-                <&sk LALT>;
+            bindings = <&kp LEFT_ALT>, <&sk LALT>;
         };
     };
 
@@ -33,9 +31,9 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp TAB  &kp Q  &kp W             &kp E  &kp R           &kp T      &kp Y  &kp U                    &kp I    &kp O     &kp P              &kp BSPC
-&kp ESC  &kp A  &kp S             &kp D  &kp F           &kp G      &kp H  &kp J                    &kp K    &kp L  &kp SEMI               &kp SQT
-   &td0  &kp Z  &kp X             &kp C  &kp V           &kp B      &kp N  &kp M                &kp COMMA  &kp DOT  &kp FSLH  &mt LEFT_SHIFT ENTER
+&kp TAB  &kp Q  &kp W  &kp E             &kp R  &kp T           &kp Y      &kp U  &kp I                    &kp O    &kp P     &kp BSPC
+&kp ESC  &kp A  &kp S  &kp D             &kp F  &kp G           &kp H      &kp J  &kp K                    &kp L    &kp SEMI  &kp SQT
+&td0     &kp Z  &kp X  &kp C             &kp V  &kp B           &kp N      &kp M  &kp COMMA                &kp DOT  &kp FSLH  &mt LEFT_SHIFT ENTER
                        &kp LEFT_CONTROL  &mo 1  &kp LEFT_SHIFT  &kp SPACE  &mo 2  &mt RIGHT_GUI RG(SPACE)
             >;
         };
@@ -48,10 +46,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp GRAVE      &kp N1      &kp N2      &kp N3  &kp N4          &kp N5    &kp N6             &kp N7         &kp N8     &kp N9            &kp N0              &kp BSPC
- &kp CAPS      &trans      &trans      &trans  &trans          &trans  &kp LEFT           &kp DOWN         &kp UP  &kp RIGHT  &kp LEFT_BRACKET     &kp RIGHT_BRACKET
-   &trans  &kp C_MUTE  &kp C_PREV  &kp C_NEXT  &trans          &trans    &trans             &trans      &kp MINUS  &kp EQUAL     &kp BACKSLASH  &mt LEFT_SHIFT ENTER
-                                       &trans  &trans  &kp LEFT_SHIFT     &mo 3  &kp RIGHT_CONTROL  &kp RIGHT_GUI
+&kp GRAVE  &kp N1      &kp N2      &kp N3      &kp N4  &kp N5          &kp N6    &kp N7             &kp N8         &kp N9     &kp N0            &kp BSPC
+&kp CAPS   &trans      &trans      &trans      &trans  &trans          &kp LEFT  &kp DOWN           &kp UP         &kp RIGHT  &kp LEFT_BRACKET  &kp RIGHT_BRACKET
+&trans     &kp C_MUTE  &kp C_PREV  &kp C_NEXT  &trans  &trans          &trans    &trans             &kp MINUS      &kp EQUAL  &kp BACKSLASH     &mt LEFT_SHIFT ENTER
+                                   &trans      &trans  &kp LEFT_SHIFT  &mo 3     &kp RIGHT_CONTROL  &kp RIGHT_GUI
             >;
         };
 
@@ -63,19 +61,19 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp TILDE  &kp EXCL             &kp AT         &kp HASH      &kp DLLR       &kp PRCNT  &kp CARET  &kp AMPS   &kp ASTERISK   &kp LPAR        &kp RPAR           &trans
-   &trans    &trans      &kp LA(LG(X))    &kp LA(LG(C))        &trans   &kp LA(LG(G))   &kp LEFT  &kp DOWN         &kp UP  &kp RIGHT  &kp LEFT_BRACE  &kp RIGHT_BRACE
-   &trans  &kp C_PP  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP        &trans          &trans     &trans    &trans      &kp UNDER   &kp PLUS        &kp PIPE           &trans
-                                              &kp LCTRL  &kp LEFT_GUI  &kp LEFT_SHIFT     &trans    &trans  &kp RIGHT_GUI
+&kp TILDE  &kp EXCL  &kp AT             &kp HASH         &kp DLLR      &kp PRCNT       &kp CARET  &kp AMPS  &kp ASTERISK   &kp LPAR   &kp RPAR        &trans
+&trans     &trans    &kp LA(LG(X))      &kp LA(LG(C))    &trans        &kp LA(LG(G))   &kp LEFT   &kp DOWN  &kp UP         &kp RIGHT  &kp LEFT_BRACE  &kp RIGHT_BRACE
+&trans     &kp C_PP  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &trans        &trans          &trans     &trans    &kp UNDER      &kp PLUS   &kp PIPE        &trans
+                                        &kp LCTRL        &kp LEFT_GUI  &kp LEFT_SHIFT  &trans     &trans    &kp RIGHT_GUI
             >;
         };
 
         Layer__3 {
             bindings = <
-   &kp F12        &kp F1        &kp F2        &kp F3        &kp F4        &kp F5  &kp F6            &kp F7             &kp F8  &kp F9  &kp F10  &kp F11
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &trans  &ext_power EP_ON  &ext_power EP_OFF  &trans   &trans   &trans
-    &trans        &trans        &trans        &trans        &trans        &trans  &trans            &trans             &trans  &trans   &trans   &trans
-                                              &trans        &trans        &trans  &trans            &trans             &trans
+&kp F12       &kp F1      &kp F2        &kp F3        &kp F4        &kp F5        &kp F6  &kp F7            &kp F8             &kp F9  &kp F10  &kp F11
+&bt BT_SEL 0  &bt BT_CLR  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &trans  &ext_power EP_ON  &ext_power EP_OFF  &trans  &trans   &trans
+&trans        &trans      &trans        &trans        &trans        &trans        &trans  &trans            &trans             &trans  &trans   &trans
+                                        &trans        &trans        &trans        &trans  &trans            &trans
             >;
         };
 
